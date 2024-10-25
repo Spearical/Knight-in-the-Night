@@ -1,0 +1,224 @@
+[gd_scene load_steps=21 format=3 uid="uid://cbl0cx4qamkbr"]
+
+[ext_resource type="Texture2D" uid="uid://ci6q03xym4xxc" path="res://sprites/coin.png" id="1_cx6lv"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_lwf7t"]
+[ext_resource type="AudioStream" uid="uid://b7g7cr8ymc856" path="res://sounds/coin.wav" id="2_oq1ob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bel15"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j53fs"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ply1g"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx0ts"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nunf"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_411wt"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70txq"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fhn8"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bhc4"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2mou"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pumx6"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shux4"]
+atlas = ExtResource("1_cx6lv")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dhgjb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bel15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j53fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ply1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx0ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nunf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_411wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70txq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fhn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bhc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2mou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pumx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shux4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y818t"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_vhjsl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PickupSFX:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_m4i7c"]
+resource_name = "pickup"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PickupSFX:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_plpy3"]
+_data = {
+"RESET": SubResource("Animation_vhjsl"),
+"pickup": SubResource("Animation_m4i7c")
+}
+
+[node name="Coin" type="Area2D" groups=["Coins"]]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_lwf7t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_dhgjb")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_y818t")
+
+[node name="PickupSFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -5)
+stream = ExtResource("2_oq1ob")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_plpy3")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
