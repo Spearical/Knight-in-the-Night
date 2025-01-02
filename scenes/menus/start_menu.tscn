@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dld7vlclryo03"]
+[gd_scene load_steps=3 format=3 uid="uid://dld7vlclryo03"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_bxjmb"]
+[ext_resource type="AudioStream" uid="uid://cdijnrmvyx81n" path="res://music/Intro_Space_Song.wav" id="2_3ca77"]
 
 [node name="StartMenu" type="CenterContainer"]
 anchors_preset = 15
@@ -13,11 +14,26 @@ script = ExtResource("1_bxjmb")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
+[node name="Title" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "Knight in the Night"
+horizontal_alignment = 1
+
 [node name="StartGameButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 16)
 layout_mode = 2
 text = "Start
+"
+
+[node name="TutorialGameButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Tutorial
 "
 
 [node name="QuitGameButton" type="Button" parent="VBoxContainer"]
@@ -26,5 +42,11 @@ custom_minimum_size = Vector2(64, 16)
 layout_mode = 2
 text = "Quit"
 
+[node name="Start Menu Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3ca77")
+volume_db = -5.0
+autoplay = true
+
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/TutorialGameButton" to="." method="_on_tutorial_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitGameButton" to="." method="_on_quit_game_button_pressed"]

@@ -7,4 +7,4 @@ func _ready():
 	menu_button.grab_focus()
 
 func _on_menu_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/start_menu.tscn")

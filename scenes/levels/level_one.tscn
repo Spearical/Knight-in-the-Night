@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://ceoia6d4mu0aw"]
+[gd_scene load_steps=14 format=4 uid="uid://ceoia6d4mu0aw"]
 
 [ext_resource type="PackedScene" uid="uid://8ngdjhnngb42" path="res://scenes/world.tscn" id="1_bgouc"]
 [ext_resource type="Texture2D" uid="uid://bbvar6nn1wute" path="res://sprites/tileset.png" id="2_kawlu"]
-[ext_resource type="PackedScene" uid="uid://dnl5hepstn0ux" path="res://scenes/level_two.tscn" id="2_utsci"]
+[ext_resource type="PackedScene" uid="uid://dnl5hepstn0ux" path="res://scenes/levels/level_two.tscn" id="2_utsci"]
 [ext_resource type="Texture2D" uid="uid://cogkym3btlydc" path="res://sprites/slopes.png" id="3_finxl"]
 [ext_resource type="Texture2D" uid="uid://c35bcwa3wpfk4" path="res://sprites/slopes_flipped.png" id="4_y5u12"]
-[ext_resource type="PackedScene" uid="uid://blaep81nvouy4" path="res://scenes/spikes.tscn" id="5_54w2c"]
-[ext_resource type="PackedScene" uid="uid://cbl0cx4qamkbr" path="res://scenes/coin.tscn" id="6_265ld"]
+[ext_resource type="PackedScene" uid="uid://blaep81nvouy4" path="res://scenes/hazards/spikes.tscn" id="5_54w2c"]
+[ext_resource type="PackedScene" uid="uid://cbl0cx4qamkbr" path="res://scenes/collectibles/coin.tscn" id="6_265ld"]
+[ext_resource type="AudioStream" uid="uid://dpproktmytkbo" path="res://music/SkunkMan.mp3" id="8_lokn6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_16mto"]
 texture = ExtResource("2_kawlu")
@@ -500,3 +501,9 @@ position = Vector2(16, 0)
 
 [node name="Coin3" parent="Coins" index="9" instance=ExtResource("6_265ld")]
 position = Vector2(-40, -64)
+
+[node name="BackgroundMusic" parent="." index="7"]
+stream = ExtResource("8_lokn6")
+autoplay = true
+bus = &"Music"
+playback_type = 1

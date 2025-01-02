@@ -10,16 +10,20 @@ config_version=5
 
 [application]
 
-config/name="Heart Platformer Prototype"
-run/main_scene="res://scenes/start_menu.tscn"
+config/name="Knight in the Night"
+run/main_scene="res://scenes/menus/start_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://music/default_bus_layout.tres"
+
 [autoload]
 
 Events="*res://scripts/Events.gd"
-LevelTransition="*res://scenes/level_transition.tscn"
+LevelTransition="*res://scenes/menus/level_transition.tscn"
 
 [display]
 

@@ -14,7 +14,7 @@ var start_level_msec = 0.0
 func _ready() -> void:
 	if not next_level is PackedScene:
 		level_completed.next_level_button.text = "Victory Screen"
-		next_level = load("res://scenes/victory_screen.tscn")
+		next_level = load("res://scenes/menus/victory_screen.tscn")
 			
 	Events.level_completed.connect(show_level_completed)
 	get_tree().paused = true
