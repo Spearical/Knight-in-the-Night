@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://bg8ot01rweqga"]
+[gd_scene load_steps=7 format=4 uid="uid://bg8ot01rweqga"]
 
 [ext_resource type="PackedScene" uid="uid://8ngdjhnngb42" path="res://scenes/world.tscn" id="1_76gvc"]
 [ext_resource type="PackedScene" uid="uid://sba55uy34pdx" path="res://scenes/levels/level_three.tscn" id="2_n0stw"]
 [ext_resource type="AudioStream" uid="uid://dpproktmytkbo" path="res://music/SkunkMan.mp3" id="2_o723x"]
 [ext_resource type="PackedScene" uid="uid://blaep81nvouy4" path="res://scenes/hazards/spikes.tscn" id="2_q8lot"]
 [ext_resource type="PackedScene" uid="uid://cbl0cx4qamkbr" path="res://scenes/collectibles/coin.tscn" id="3_8lgqw"]
+[ext_resource type="PackedScene" uid="uid://dyrlxl3xne3kb" path="res://scenes/collectibles/checkpoint.tscn" id="6_k0mim"]
 
 [node name="World" instance=ExtResource("1_76gvc")]
 next_level = ExtResource("2_n0stw")
@@ -362,3 +363,11 @@ position = Vector2(824, 368)
 
 [node name="Spikes21" parent="SpikeCollection/Lower Level" index="41" instance=ExtResource("2_q8lot")]
 position = Vector2(840, 368)
+
+[node name="Checkpoints" type="Node2D" parent="." index="7"]
+
+[node name="Checkpoint" parent="Checkpoints" index="0" instance=ExtResource("6_k0mim")]
+position = Vector2(876, 240)
+
+[node name="Checkpoint2" parent="Checkpoints" index="1" instance=ExtResource("6_k0mim")]
+position = Vector2(168, 352)

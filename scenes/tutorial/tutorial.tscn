@@ -573,7 +573,7 @@ position = Vector2(2, -67)
 [node name="Checkpoints" type="Node2D" parent="."]
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource("10_vivg8")]
-position = Vector2(483, 304)
+position = Vector2(787, -48)
 
 [connection signal="main_menu" from="CanvasLayer/TutorialCompleted" to="." method="_on_tutorial_completed_main_menu"]
 [connection signal="start_game" from="CanvasLayer/TutorialCompleted" to="." method="_on_tutorial_completed_start_game"]
