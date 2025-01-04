@@ -115,3 +115,6 @@ func update_animations(direction: float) -> void:
 func _on_hazard_detector_area_entered(_area: Area2D) -> void:
 	hazard_sfx.play()
 	global_position = starting_position
+
+func _on_checkpoint_detector_area_entered(area: Area2D) -> void:
+	starting_position = area.global_position
