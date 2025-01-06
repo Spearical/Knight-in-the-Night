@@ -444,7 +444,6 @@ script = ExtResource("1_ahtwb")
 first_level = ExtResource("2_46dli")
 
 [node name="Player" parent="." instance=ExtResource("3_4t7ts")]
-z_index = 1
 position = Vector2(16, 352)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

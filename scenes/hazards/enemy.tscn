@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg5av1h1db227"]
+
+[ext_resource type="PackedScene" uid="uid://ctx5fq5luopqw" path="res://scenes/hazards/hazard_zone.tscn" id="1_3gjyi"]
+
+[node name="Enemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="HazardZone" parent="." instance=ExtResource("1_3gjyi")]

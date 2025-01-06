@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpg4yao7mqhye"]
+
+[ext_resource type="PackedScene" uid="uid://dg5av1h1db227" path="res://scenes/hazards/enemy.tscn" id="1_f50l7"]
+[ext_resource type="Script" path="res://scripts/green_ceiling_slime.gd" id="2_8oh18"]
+[ext_resource type="Texture2D" uid="uid://biuljl4iie0pa" path="res://sprites/slime_green.png" id="3_6x10w"]
+[ext_resource type="Resource" uid="uid://ch6h2gt4ime2v" path="res://resources/entities/green_slime_movement.tres" id="3_cckky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a27ae"]
+atlas = ExtResource("3_6x10w")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xkuj"]
+atlas = ExtResource("3_6x10w")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3873y"]
+atlas = ExtResource("3_6x10w")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhg18"]
+atlas = ExtResource("3_6x10w")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r7q0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a27ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xkuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3873y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhg18")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bc8ip"]
+size = Vector2(8, 12)
+
+[node name="Green Ceiling Slime" instance=ExtResource("1_f50l7")]
+rotation = -3.14159
+script = ExtResource("2_8oh18")
+movement_data = ExtResource("3_cckky")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_r7q0a")
+autoplay = "default"
+frame_progress = 0.626459
+flip_h = true
+
+[node name="HazardZone" parent="." index="1"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardZone" index="0"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_bc8ip")
+
+[node name="RightRayCast" type="RayCast2D" parent="." index="2"]
+position = Vector2(0, -6)
+target_position = Vector2(-16, 0)
+
+[node name="LeftRayCast" type="RayCast2D" parent="." index="3"]
+position = Vector2(0, -6)
+target_position = Vector2(16, 0)

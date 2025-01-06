@@ -436,7 +436,7 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_vi210")
 sources/1 = SubResource("TileSetAtlasSource_ygcy5")
 
-[node name="LevelOne" instance=ExtResource("1_bgouc")]
+[node name="Level One" instance=ExtResource("1_bgouc")]
 next_level = ExtResource("2_u367g")
 
 [node name="Player" parent="." index="0"]

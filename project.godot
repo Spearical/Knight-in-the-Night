@@ -43,7 +43,7 @@ Coins=""
 
 [gui]
 
-theme/custom="res://resources/default_theme.tres"
+theme/custom="res://resources/gui/default_theme.tres"
 theme/custom_font="res://fonts/pixel_font.ttf"
 
 [input]

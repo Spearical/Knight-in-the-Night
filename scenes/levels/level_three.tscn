@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=4 uid="uid://sba55uy34pdx"]
 
 [ext_resource type="PackedScene" uid="uid://8ngdjhnngb42" path="res://scenes/world.tscn" id="1_ccb4d"]
-[ext_resource type="PackedScene" uid="uid://dmfd87qgg7vmn" path="res://scenes/levels/level_four.tscn" id="2_u0sd6"]
+[ext_resource type="PackedScene" uid="uid://dnl5hepstn0ux" path="res://scenes/levels/level_four.tscn" id="2_u0sd6"]
 [ext_resource type="AudioStream" uid="uid://dpproktmytkbo" path="res://music/SkunkMan.mp3" id="3_21j0e"]
 [ext_resource type="PackedScene" uid="uid://blaep81nvouy4" path="res://scenes/hazards/spikes.tscn" id="3_sj2bp"]
 [ext_resource type="PackedScene" uid="uid://cbl0cx4qamkbr" path="res://scenes/collectibles/coin.tscn" id="4_sb1qr"]
 
-[node name="World" instance=ExtResource("1_ccb4d")]
+[node name="Level Three" instance=ExtResource("1_ccb4d")]
 next_level = ExtResource("2_u0sd6")
 
 [node name="Player" parent="." index="0"]

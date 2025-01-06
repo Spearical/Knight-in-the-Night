@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cbl0cx4qamkbr" path="res://scenes/collectibles/coin.tscn" id="3_8lgqw"]
 [ext_resource type="PackedScene" uid="uid://dyrlxl3xne3kb" path="res://scenes/collectibles/checkpoint.tscn" id="6_k0mim"]
 
-[node name="World" instance=ExtResource("1_76gvc")]
+[node name="Level Two" instance=ExtResource("1_76gvc")]
 next_level = ExtResource("2_n0stw")
 
 [node name="Player" parent="." index="0"]

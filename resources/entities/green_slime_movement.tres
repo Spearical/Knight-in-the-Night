@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemyMovementData" load_steps=2 format=3 uid="uid://ch6h2gt4ime2v"]
+
+[ext_resource type="Script" path="res://scripts/EnemyMovementData.gd" id="1_fxtll"]
+
+[resource]
+script = ExtResource("1_fxtll")
+speed = 100.0
+acceleration = 0.0
+friction = 0.0
